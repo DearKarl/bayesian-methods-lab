@@ -1,6 +1,6 @@
-# Thesis-Core Experiments
+# Core Research Experiments
 
-**Status:** Structure reserved; no thesis-core experiment is implemented
+**Status:** Structure reserved; no core experiment is implemented
 
 Future studies will be organized by scientific gate:
 

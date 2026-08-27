@@ -1,8 +1,8 @@
 # Research Questions
 
-The authoritative PhD questions, hypotheses, falsifiers, and claim ladder are
+The authoritative research questions, hypotheses, falsifiers, and claim ladder are
 maintained in
-[thesis/research_questions.md](thesis/research_questions.md).
+[research/research_questions.md](research/research_questions.md).
 
 The canonical sequence is:
 
@@ -29,6 +29,6 @@ signals. Text-only hallucination, retrieval, and agentic questions remain
 supporting routes unless a protocol connects them to a canonical cross-modal
 hypothesis.
 
-See the [scope charter](thesis/scope_charter.md), [problem
-taxonomy](thesis/problem_taxonomy.md), and [roadmap](roadmap.md) before adding a
+See the [scope charter](research/scope_charter.md), [problem
+taxonomy](research/problem_taxonomy.md), and [roadmap](roadmap.md) before adding a
 new research question or implementation.

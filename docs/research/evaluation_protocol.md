@@ -113,5 +113,5 @@ not assume perfect, immediate, or cost-free review.
   evaluation.
 
 If a generic deterministic predictor subsumes the conflict component, report
-that result and narrow the thesis claim. Do not expand the endpoint or choose a
+that result and narrow the research claim. Do not expand the endpoint or choose a
 favourable subgroup after the confirmatory analysis.

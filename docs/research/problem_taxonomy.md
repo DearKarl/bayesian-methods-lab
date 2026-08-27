@@ -31,7 +31,7 @@ the object it manipulates, measures, predicts, or uses for a decision.
 | Selective risk | Residual error among cases on which the system chooses to answer |
 
 Cross-modal conflict is an input relationship. Hallucination is an output
-failure. Either may occur without the other. The thesis must not use the terms
+failure. Either may occur without the other. The programme must not use the terms
 as synonyms.
 
 ## Decision Objects
@@ -57,5 +57,5 @@ Every result should state:
 3. the measured signal and its units or normalization;
 4. the outcome label and annotation source;
 5. the decision, if any, made from the signal;
-6. whether the evidence is a pilot, completed experiment, or promoted thesis
+6. whether the evidence is a pilot, completed experiment, or promoted research
    result.

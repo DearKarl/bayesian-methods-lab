@@ -1,6 +1,6 @@
 # 2026 Research-Plan Refresh
 
-**Status:** Incorporated into the canonical thesis protocols on 2026-08-27
+**Status:** Incorporated into the canonical research protocols on 2026-08-27
 
 The refresh established four durable decisions:
 
@@ -15,10 +15,10 @@ The refresh established four durable decisions:
 
 The detailed and actively maintained version is now split across:
 
-- [literature matrix](thesis/literature_matrix.md);
-- [measurement protocol](thesis/measurement_protocol.md);
-- [evaluation protocol](thesis/evaluation_protocol.md);
-- [data governance](thesis/data_governance.md);
+- [literature matrix](research/literature_matrix.md);
+- [measurement protocol](research/measurement_protocol.md);
+- [evaluation protocol](research/evaluation_protocol.md);
+- [data governance](research/data_governance.md);
 - [roadmap](roadmap.md).
 
 This compatibility page is not an independent roadmap and should not be updated

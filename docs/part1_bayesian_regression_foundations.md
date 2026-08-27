@@ -3,7 +3,7 @@
 ## Abstract
 
 Part I consolidates the repository's earlier Bayesian regression work and
-establishes methodological standards for the PhD programme on cross-modal
+establishes methodological standards for the research programme on cross-modal
 semantic uncertainty. A controlled Boston Housing
 benchmark is used to compare ordinary least squares, regularized regression,
 empirical Bayes estimators, and a custom Gibbs sampler. The purpose is not to
@@ -15,14 +15,14 @@ splits, the custom Gibbs model does not show a stable RMSE advantage over the
 baselines. Its principal value is the availability of posterior samples,
 predictive intervals, and competitive predictive-density scores. These lessons
 provide a statistical foundation for separating prediction, uncertainty
-quality, calibration, and decision value in later thesis studies.
+quality, calibration, and decision value in later research studies.
 
 ## Position in the Research Programme
 
-Part I is a preserved foundation rather than the first thesis experiment.
+Part I is a preserved foundation rather than the first core experiment.
 [Part 0](../part0_reproductions/README.md) supplies supporting reproduction
-evidence. The canonical thesis begins with the controlled
-[measurement protocol](thesis/measurement_protocol.md), while Part I provides a
+evidence. The canonical programme begins with the controlled
+[measurement protocol](research/measurement_protocol.md), while Part I provides a
 transparent setting in which posterior inference, repeated evaluation, and
 cautious interpretation are already demonstrated.
 
@@ -306,7 +306,7 @@ diagnostics and repeated comparisons, not one attractive interval plot. Fourth,
 the output required for a decision is a predictive distribution, whereas a
 point estimate or raw uncertainty score is insufficient.
 
-These conclusions define the standard for subsequent thesis studies. A future
+These conclusions define the standard for subsequent research studies. A future
 task-error risk model should be evaluated with binary NLL and Brier score,
 calibration curves, discrimination metrics, risk--coverage, subgroup analysis,
 and repeated or hierarchical comparisons across models and datasets. It should
@@ -353,7 +353,7 @@ prior and implemented conditionals require a dedicated consistency audit, and
 the repeated-split experiment does not replace external validation. Most
 importantly, regression uncertainty does not capture semantic equivalence,
 factual evidence, label noise, multimodal grounding, model shift, or temporal
-error propagation. These are targets for the canonical thesis studies, not
+error propagation. These are targets for the canonical research studies, not
 properties established by Part I.
 
 ## Reproduction

@@ -1,15 +1,15 @@
 # Measurement Protocol
 
-**Status:** Protocol design; no thesis-core measurement has been validated
+**Status:** Protocol design; no core measurement has been validated
 
 ## Objective
 
-The first thesis study will test whether cross-modal conflict can be measured
+The first core study will test whether cross-modal conflict can be measured
 as a distinct construct rather than as a mixture of unimodal ambiguity,
 information loss, representation scale, model uncertainty, and output
 variation.
 
-The protocol must be frozen before thesis-core implementation begins.
+The protocol must be frozen before core implementation begins.
 
 ## Decisions Required Before Implementation
 

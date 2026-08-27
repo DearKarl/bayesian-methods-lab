@@ -1,6 +1,6 @@
 # Route 6: Agentic and Multi-Agent Uncertainty
 
-**Relationship to thesis:** supporting downstream route; outside the core
+**Relationship to programme:** supporting downstream route; outside the core
 unless it tests a validated cross-modal risk signal.
 
 This route moves from answer-level uncertainty to uncertainty over claims,

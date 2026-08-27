@@ -4,16 +4,16 @@
 study details before formal citation or reproduction
 
 The matrix asks what each work establishes, what it does not establish, and
-which thesis comparison it motivates. Inclusion is not an endorsement of a
+which comparison it motivates. Inclusion is not an endorsement of a
 method or a claim of reproducibility.
 
 ## Verified Primary-Source Starting Points
 
-| Area | Primary source | Relevance | Boundary for this thesis |
+| Area | Primary source | Relevance | Boundary for this programme |
 | --- | --- | --- | --- |
 | Output semantic uncertainty | [Farquhar et al., semantic entropy, Nature 2024](https://www.nature.com/articles/s41586-024-07421-0) | Measures variation at the level of answer meaning | Does not by itself isolate input-level image--text conflict |
 | Evaluation incentives | [Kalai et al., Nature 2026](https://www.nature.com/articles/s41586-026-10549-w) | Motivates explicit error costs and abstention-aware evaluation | Does not supply a cross-modal uncertainty decomposition |
-| Text uncertainty benchmark | [LM-Polygraph, TACL 2025](https://aclanthology.org/2025.tacl-1.11/) | Provides text-UQ estimators and calibration baselines | Text-output evidence is supporting, not the thesis core |
+| Text uncertainty benchmark | [LM-Polygraph, TACL 2025](https://aclanthology.org/2025.tacl-1.11/) | Provides text-UQ estimators and calibration baselines | Text-output evidence is supporting, not part of the core programme |
 | Probabilistic image--text embeddings | [PCME, CVPR 2021](https://openaccess.thecvf.com/content/CVPR2021/html/Chun_Probabilistic_Embeddings_for_Cross-Modal_Retrieval_CVPR_2021_paper.html) | Establishes a probabilistic cross-modal representation baseline | Representation spread is not automatically an identified uncertainty source |
 | Improved probabilistic embeddings | [PCME++, ICLR 2024](https://proceedings.iclr.cc/paper_files/paper/2024/hash/ad9d6ab10446114cf5482d5e1f971a84-Abstract-Conference.html) | Provides an updated probabilistic image--text comparison | Retrieval performance does not establish calibrated failure risk |
 | Frozen-VLM probabilistic adapter | [ProbVLM, ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/html/Upadhyay_ProbVLM_Probabilistic_Adapter_for_Frozen_Vison-Language_Models_ICCV_2023_paper.html) | Motivates tractable distributional adapters | Must be compared with matched deterministic and other uncertainty baselines |
@@ -36,7 +36,7 @@ dataset protocol are required before use.
 
 ## Defensible Gap
 
-The thesis gap is not uncertainty in vision--language models generally, nor the
+The research gap is not uncertainty in vision--language models generally, nor the
 use of Gaussian embeddings by itself. The testable gap is:
 
 > Does an explicitly identified measure of image--text conflict add calibrated,
@@ -46,7 +46,7 @@ use of Gaussian embeddings by itself. The testable gap is:
 
 This gap can yield a useful null result. If a matched deterministic predictor
 or output uncertainty fully subsumes the proposed conflict component, the
-thesis claim should narrow accordingly.
+research claim should narrow accordingly.
 
 ## Bibliographic Audit Fields
 

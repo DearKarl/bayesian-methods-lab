@@ -40,5 +40,5 @@ Improved retrospective selective risk is not evidence of clinical benefit. A
 clinician-in-the-loop study requires separate ethics, governance, interface,
 and human-factors protocols.
 
-See the canonical [evaluation protocol](thesis/evaluation_protocol.md) and
+See the canonical [evaluation protocol](research/evaluation_protocol.md) and
 [roadmap](roadmap.md).

@@ -1,9 +1,9 @@
 # Supporting Design Record: Multimodal Failure Risk
 
-**Status:** Earlier design scaffold; superseded as the thesis entry point
+**Status:** Earlier design scaffold; superseded as the core entry point
 
 The previous Part III plan compressed perceptual failure, cross-modal conflict,
-and output hallucination into a single multimodal risk stage. The canonical PhD
+and output hallucination into a single multimodal risk stage. The canonical research
 programme now separates those objects.
 
     input ambiguity and conflict
@@ -28,9 +28,9 @@ They are outcome labels, not interchangeable uncertainty sources.
 ## Permitted Use of This Scaffold
 
 This page may inform a later hierarchical outcome model across models, datasets,
-sites, or error types. Such a model becomes thesis work only after the
-[measurement protocol](thesis/measurement_protocol.md) has identified the
-input-side constructs and the [evaluation protocol](thesis/evaluation_protocol.md)
+sites, or error types. Such a model becomes core work only after the
+[measurement protocol](research/measurement_protocol.md) has identified the
+input-side constructs and the [evaluation protocol](research/evaluation_protocol.md)
 has frozen the outcome and comparison.
 
 ## Minimum Comparisons
@@ -50,5 +50,5 @@ grounding signals, and model-based judges may be noisy. Results must remain
 dataset- and task-bounded.
 
 The canonical first study is
-[controlled conflict identifiability](thesis/measurement_protocol.md), not this
+[controlled conflict identifiability](research/measurement_protocol.md), not this
 historical Part III sequence.

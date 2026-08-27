@@ -1,7 +1,7 @@
-# PhD Research Roadmap
+# Research Roadmap
 
 **Status:** Canonical execution order
-**Scope authority:** [PhD scope charter](thesis/scope_charter.md)
+**Scope authority:** [research scope charter](research/scope_charter.md)
 
 This roadmap is organized by evidence gates rather than by method names. A
 later study does not begin merely because an earlier implementation is
@@ -25,7 +25,7 @@ Required decisions:
 **Promotion evidence:** Approved scope, measurement protocol, evaluation
 protocol, and dataset decision record.
 
-**Stop condition:** Do not implement thesis-core models while the task or
+**Stop condition:** Do not implement core models while the task or
 measurement object remains unfrozen.
 
 ## Study 1: Controlled Conflict Identifiability
@@ -90,7 +90,7 @@ Planned work:
 pre-specified baselines, with adequate calibration for the tested population.
 
 **Stop condition:** If generic confidence or a matched deterministic predictor
-subsumes conflict, report the null result and narrow the thesis claim.
+subsumes conflict, report the null result and narrow the research claim.
 
 ## Study 4: Selective and Human-Review Decisions
 
@@ -136,10 +136,10 @@ multimodal evidence.
   scaffolds unless their pages state otherwise.
 
 Text-only hallucination modelling may be used as a small calibration exercise.
-It is not the next thesis stage and must not delay Study 1.
+It is not the next research stage and must not delay Study 1.
 
 ## Current Repository Stop Point
 
-The documentation transition is authorized. New thesis-core code, data access,
+The documentation transition is authorized. New core research code, data access,
 model training, and experiment execution are not authorized until Gate 0 is
 closed through supervisor decisions and a bounded implementation brief.

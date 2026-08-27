@@ -1,6 +1,6 @@
 # Data Governance and Dataset Protocol
 
-**Status:** Governance scaffold; no thesis-core dataset is approved by this file
+**Status:** Governance scaffold; no core dataset is approved by this file
 
 ## Current Position
 

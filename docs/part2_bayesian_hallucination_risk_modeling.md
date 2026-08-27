@@ -1,11 +1,11 @@
 # Supporting Study: Text-Only Risk Calibration
 
-**Status:** Supporting protocol scaffold; not the next thesis-core study
+**Status:** Supporting protocol scaffold; not the next core study
 
 This page preserves a useful text-only calibration exercise from the earlier
 Part II plan. It may be used to test feature interfaces, noisy-label models,
 proper scoring, and selective prediction at small scale. It must not delay the
-first thesis study on controlled image--text conflict.
+first core study on controlled image--text conflict.
 
 ## Supporting Question
 
@@ -44,6 +44,6 @@ This exercise cannot establish:
 - that Bayesian calibration is superior to matched alternatives;
 - decision value without an explicit action and cost.
 
-Any implementation requires its own bounded protocol. The active thesis order
-is defined in the [roadmap](roadmap.md), and thesis risk evaluation is governed
-by the [evaluation protocol](thesis/evaluation_protocol.md).
+Any implementation requires its own bounded protocol. The active research sequence
+is defined in the [roadmap](roadmap.md), and core risk evaluation is governed
+by the [evaluation protocol](research/evaluation_protocol.md).

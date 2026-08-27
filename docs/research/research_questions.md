@@ -73,7 +73,7 @@ better AUROC does not establish calibration or clinical usefulness.
 
 ## Supporting Questions
 
-The following questions are useful but are not independent thesis axes:
+The following questions are useful but are not independent programme axes:
 
 - Which probabilistic representation is computationally tractable and stable?
 - Which uncertainty components can be estimated without full model retraining?

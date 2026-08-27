@@ -1,4 +1,4 @@
-# PhD Scope Charter
+# Research Scope Charter
 
 **Status:** Canonical research boundary
 
@@ -72,7 +72,7 @@ the medical task, dataset, access conditions, and clinical evaluation plan.
 - autonomous clinical diagnosis, treatment, or deployment;
 - claims of clinical benefit from retrospective benchmarks;
 - collection of new patient data;
-- a thesis whose main contribution is generic RAG, generic hallucination
+- a research programme whose main contribution is generic RAG, generic hallucination
   detection, or multi-agent orchestration;
 - treating agent agreement as independent evidence without testing shared
   error sources;
@@ -91,7 +91,7 @@ the medical task, dataset, access conditions, and clinical evaluation plan.
 The exact primary metric and smallest effect of interest must be frozen in the
 evaluation protocol before confirmatory experiments.
 
-## Evidence Required for a Thesis Claim
+## Evidence Required for a Research Claim
 
 - frozen task, prediction unit, outcome label, and intervention taxonomy;
 - dataset version, provenance, exclusions, leakage controls, and split logic;

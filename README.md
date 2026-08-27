@@ -2,7 +2,7 @@
 
 ## Decomposable Cross-Modal Semantic Uncertainty for Reliable Decisions
 
-This repository is the working research record for a PhD programme on
+This repository is the working record for a research programme on
 cross-modal semantic uncertainty. The central problem is to determine whether
 uncertainty caused by genuine disagreement between image and text can be
 distinguished from ambiguity within either modality, uncertainty about model
@@ -37,16 +37,16 @@ controlled image--text interventions
    answer coverage or human-review budget?
 
 The hypotheses, null interpretations, and claim boundaries are maintained in
-the [canonical research questions](docs/thesis/research_questions.md).
+the [canonical research questions](docs/research/research_questions.md).
 
-## Thesis Workstreams
+## Research Workstreams
 
 | Workstream | Purpose | Current status |
 | --- | --- | --- |
-| [Study 1: Conflict identifiability](docs/thesis/measurement_protocol.md) | Test whether controlled interventions isolate cross-modal conflict from unimodal ambiguity | Protocol design; no thesis result |
-| [Study 2: Uncertainty decomposition](docs/thesis/measurement_protocol.md) | Compare deterministic, probabilistic-embedding, ensemble, and approximate-Bayesian representations | Planned |
-| [Study 3: Calibration and incremental value](docs/thesis/evaluation_protocol.md) | Test whether conflict improves proper scores, calibration, and risk ranking on held-out data | Planned |
-| [Study 4: Selective decisions](docs/thesis/evaluation_protocol.md) | Compare answer, clarify, verify, abstain, and human-review policies under explicit costs | Planned |
+| [Study 1: Conflict identifiability](docs/research/measurement_protocol.md) | Test whether controlled interventions isolate cross-modal conflict from unimodal ambiguity | Protocol design; no result |
+| [Study 2: Uncertainty decomposition](docs/research/measurement_protocol.md) | Compare deterministic, probabilistic-embedding, ensemble, and approximate-Bayesian representations | Planned |
+| [Study 3: Calibration and incremental value](docs/research/evaluation_protocol.md) | Test whether conflict improves proper scores, calibration, and risk ranking on held-out data | Planned |
+| [Study 4: Selective decisions](docs/research/evaluation_protocol.md) | Compare answer, clarify, verify, abstain, and human-review policies under explicit costs | Planned |
 
 The studies are gates, not a promise that one proposed method will succeed.
 Study 2 cannot be promoted because it uses distributions over embeddings;
@@ -55,17 +55,17 @@ does not begin until the risk signal is sufficiently stable and calibrated.
 
 ## Canonical Documents
 
-- [Scope charter](docs/thesis/scope_charter.md)
-- [Problem and outcome taxonomy](docs/thesis/problem_taxonomy.md)
-- [Research questions and hypotheses](docs/thesis/research_questions.md)
-- [Literature matrix](docs/thesis/literature_matrix.md)
-- [Measurement protocol](docs/thesis/measurement_protocol.md)
-- [Evaluation protocol](docs/thesis/evaluation_protocol.md)
-- [Data governance](docs/thesis/data_governance.md)
-- [Decision log](docs/thesis/decision_log.md)
+- [Scope charter](docs/research/scope_charter.md)
+- [Problem and outcome taxonomy](docs/research/problem_taxonomy.md)
+- [Research questions and hypotheses](docs/research/research_questions.md)
+- [Literature matrix](docs/research/literature_matrix.md)
+- [Measurement protocol](docs/research/measurement_protocol.md)
+- [Evaluation protocol](docs/research/evaluation_protocol.md)
+- [Data governance](docs/research/data_governance.md)
+- [Decision log](docs/research/decision_log.md)
 - [Roadmap and promotion gates](docs/roadmap.md)
 
-These documents are authoritative for future thesis work. Older Part II--IV
+These documents are authoritative for future work. Older Part II--IV
 pages are retained only as supporting design history and point back to the
 canonical protocols.
 
@@ -87,11 +87,11 @@ The implementation remains under `src/bayeslinreg/`; saved tables remain in
 [Part 0](part0_reproductions/README.md) records literature reproductions and
 supporting pilots. Its completed Route 1 pilot runs three official
 LM-Polygraph estimators on a small prompt stress test. It is a mechanism-level
-pilot, not a thesis-core result and not a full benchmark reproduction.
+pilot, not a core result and not a full benchmark reproduction.
 
 Routes on text uncertainty, Bayesian risk, calibration, retrieval, multimodal
-risk, and agentic systems remain supporting evidence. They enter the thesis
-core only when they test a pre-specified cross-modal hypothesis.
+risk, and agentic systems remain supporting evidence. They enter the core
+programme only when they test a pre-specified cross-modal hypothesis.
 
 ## Evidence Status Vocabulary
 
@@ -102,7 +102,7 @@ Every research claim should use one of these labels:
 - **mechanism-level pilot**: a small diagnostic run that does not establish a
   benchmark claim;
 - **completed experiment**: a documented run with saved outputs;
-- **promoted thesis evidence**: a completed experiment that passes its
+- **promoted research evidence**: a completed experiment that passes its
   pre-specified validity, robustness, and reporting gates.
 
 Planned work must never be described as implemented, and a raw uncertainty
@@ -111,19 +111,19 @@ score must never be described as a calibrated probability without validation.
 ## Repository Map
 
 ```text
-docs/thesis/                 canonical PhD scope and protocols
+docs/research/               canonical research scope and protocols
 part0_reproductions/         supporting literature and reproduction evidence
 docs/part1_*.md              preserved Bayesian predictive foundation
 experiments/                 existing reproducible benchmark runners
-experiments/thesis_core/     reserved gated PhD experiment structure
+experiments/research_core/   reserved gated research experiment structure
 src/bayeslinreg/             preserved Part I package
 tests/                       existing package tests
 reports/tables/              generated tables
 reports/figures/             generated figures
 ```
 
-Future thesis-core code will be added only after the corresponding protocol is
-frozen. It will not be forced into the historically named `bayeslinreg`
+Future core research code will be added only after the corresponding protocol
+is frozen. It will not be forced into the historically named `bayeslinreg`
 package.
 
 ## Reproduce Preserved Studies

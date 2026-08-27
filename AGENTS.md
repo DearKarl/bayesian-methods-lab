@@ -1,14 +1,14 @@
 # Agent Guidelines
 
-This repository is the working research record for a PhD programme on
+This repository is the working record for a research programme on
 **decomposable cross-modal semantic uncertainty for reliable decisions**.
 Medical image--text systems are the primary validation domain. The canonical
-scope, terminology, hypotheses, and evidence gates are under `docs/thesis/`.
+scope, terminology, hypotheses, and evidence gates are under `docs/research/`.
 
 ## Scope Rules
 
 - Treat controlled identification of cross-modal conflict relative to image
-  ambiguity and text ambiguity as the first thesis-core study.
+  ambiguity and text ambiguity as the first core study.
 - Treat probabilistic embeddings, Bayesian inference, ensembles, semantic
   entropy, and conformal methods as candidates to compare, not predetermined
   winners.
@@ -16,8 +16,8 @@ scope, terminology, hypotheses, and evidence gates are under `docs/thesis/`.
   *overconfident error* as synonyms.
 - Keep text-only hallucination, RAG, generic agentic, and multi-agent studies as
   supporting work unless a bounded brief connects them directly to a canonical
-  thesis hypothesis.
-- Do not begin thesis-core implementation until the task, dataset, intervention
+  research hypothesis.
+- Do not begin core implementation until the task, dataset, intervention
   taxonomy, primary outcome, baselines, promotion criteria, and stopping rules
   are frozen.
 - Do not claim clinical value, autonomous diagnostic capability, or deployment
@@ -34,7 +34,7 @@ scope, terminology, hypotheses, and evidence gates are under `docs/thesis/`.
 - Keep the custom Gibbs sampler and the Python package name `bayeslinreg` unless
   a task explicitly authorizes a change.
 - Treat the completed LM-Polygraph prompt study as a mechanism-level pilot, not
-  a full benchmark reproduction or thesis-core result.
+  a full benchmark reproduction or core result.
 - Keep generated tables in `reports/tables/` and generated figures in
   `reports/figures/`.
 
@@ -42,8 +42,8 @@ scope, terminology, hypotheses, and evidence gates are under `docs/thesis/`.
 
 - Use documentation-first, PR-sized changes and preserve working reproduction
   instructions in `README.md`.
-- Future thesis-core code should receive a package name only after its protocol
-  and interface are frozen; do not force it into `bayeslinreg`.
+- Future core research code should receive a package name only after its
+  protocol and interface are frozen; do not force it into `bayeslinreg`.
 - Run `pytest -q` before publishing changes.
 - Do not regenerate benchmark outputs merely for documentation changes.
 - If outputs are regenerated, report the exact command, environment, and every

@@ -1,6 +1,6 @@
-# Thesis Core
+# Research Core
 
-This directory contains the authoritative research contract for the PhD
+This directory contains the authoritative research contract for this
 programme. Read the documents in this order:
 
 1. [Scope charter](scope_charter.md)
@@ -13,5 +13,5 @@ programme. Read the documents in this order:
 8. [Decision log](decision_log.md)
 
 The [repository roadmap](../roadmap.md) applies these documents as promotion
-gates. A planned method or experiment is not thesis evidence until it passes
+gates. A planned method or experiment is not research evidence until it passes
 the relevant gate and its evidence status is updated explicitly.

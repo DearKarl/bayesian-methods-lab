@@ -7,8 +7,8 @@ objects, attributes, relations, counts, OCR, or reasoning.
 
 Planned reproductions should compare holistic confidence with source-specific
 measurements under clean, ambiguous, conflicting, corrupted, missing-modality,
-and out-of-distribution conditions. They become thesis evidence only when they
-follow the canonical [measurement protocol](../../docs/thesis/measurement_protocol.md).
+and out-of-distribution conditions. They become research evidence only when they
+follow the canonical [measurement protocol](../../docs/research/measurement_protocol.md).
 
 **Status:** literature protocol defined; no experiment has yet been claimed as
 reproduced.
