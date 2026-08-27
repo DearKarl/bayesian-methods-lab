@@ -1,10 +1,10 @@
-# Part 0: Reproduction and Evidence Map
+# Part 0: Supporting Reproduction and Evidence Map
 
-Part 0 is the empirical literature layer of Bayesian Methods Lab. It precedes
-the original-method studies in Parts I--IV and asks a deliberately conservative
-question: **which published uncertainty and hallucination results can be
-reproduced, under what computational assumptions, and which limitations remain
-after reproduction?**
+Part 0 is the supporting empirical literature layer for the PhD programme. It
+asks a deliberately conservative question: **which published uncertainty and
+reliability results can be reproduced, under what computational assumptions,
+and which limitations remain after reproduction?** It is an evidence service
+for the thesis, not a sequential set of thesis chapters.
 
 The six routes mirror the main strands of the 2025--2026 literature. Each route
 has its own reading list, reproduction status, experimental scope, and planned
@@ -43,8 +43,13 @@ published benchmark.
 
 ## Connection to the Research Programme
 
-Part 0 identifies dependable measurements and unresolved failure modes. [Part
-I](../docs/part1_bayesian_regression_foundations.md) establishes the laboratory's
-Bayesian predictive and evaluation discipline. Parts II--IV will then develop
-new posterior-risk models, extend them to multimodal and agentic settings, and
-convert calibrated risk into sequential decisions.
+Part 0 identifies candidate measurements, dependable mechanisms, and unresolved
+failure modes. The canonical thesis begins with
+[controlled cross-modal conflict identifiability](../docs/thesis/measurement_protocol.md),
+not with completion of every Part 0 route. A route enters the thesis core only
+when a bounded protocol connects it to a canonical hypothesis.
+
+[Part I](../docs/part1_bayesian_regression_foundations.md) remains a preserved
+Bayesian predictive foundation. Text-only risk, retrieval, and generic agentic
+work are supporting studies; they are not prerequisites for the medical
+image--text measurement study.

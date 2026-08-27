@@ -2,9 +2,9 @@
 
 ## Abstract
 
-Part I consolidates the laboratory's earlier Bayesian regression work and
-establishes the methodological standard for the subsequent study of reliable
-language, multimodal, and agentic AI systems. A controlled Boston Housing
+Part I consolidates the repository's earlier Bayesian regression work and
+establishes methodological standards for the PhD programme on cross-modal
+semantic uncertainty. A controlled Boston Housing
 benchmark is used to compare ordinary least squares, regularized regression,
 empirical Bayes estimators, and a custom Gibbs sampler. The purpose is not to
 claim that Bayesian inference universally improves point prediction. Instead,
@@ -14,39 +14,34 @@ uncertainty to a single accuracy number. Across thirty repeated train--test
 splits, the custom Gibbs model does not show a stable RMSE advantage over the
 baselines. Its principal value is the availability of posterior samples,
 predictive intervals, and competitive predictive-density scores. These lessons
-provide the statistical bridge from conventional regression uncertainty to the
-later modelling of hallucination as a calibrated posterior risk.
+provide a statistical foundation for separating prediction, uncertainty
+quality, calibration, and decision value in later thesis studies.
 
 ## Position in the Research Programme
 
-The research programme begins with [Part 0](../part0_reproductions/README.md),
-which reproduces and audits published uncertainty methods. Part I then provides
-a transparent setting in which posterior inference, calibration, repeated
-evaluation, and cautious interpretation can be studied before introducing the
-semantic, multimodal, and sequential complexity of generative AI.
+Part I is a preserved foundation rather than the first thesis experiment.
+[Part 0](../part0_reproductions/README.md) supplies supporting reproduction
+evidence. The canonical thesis begins with the controlled
+[measurement protocol](thesis/measurement_protocol.md), while Part I provides a
+transparent setting in which posterior inference, repeated evaluation, and
+cautious interpretation are already demonstrated.
 
-The conceptual transition is direct. In this benchmark, the object of interest
-is a posterior predictive distribution for an unknown continuous response. In
-Part II, the object becomes a posterior probability that a generated claim is
-hallucinated. Parts III and IV will extend that risk across modalities and use
-it to choose actions. The common principle is that reliable decisions should be
-based on a predictive distribution and an explicit loss, rather than on an
-uncalibrated score or a point prediction alone.
+The transferable principle is that a raw score or point prediction is not a
+complete decision object. Later studies must identify the intended uncertainty
+source, connect it to a calibrated task-relevant risk, and evaluate an explicit
+loss or selection constraint.
 
 ```text
-Published uncertainty signals (Part 0)
+Preserved foundation and supporting reproductions
                     |
                     v
-Posterior prediction and evaluation (Part I)
+Controlled cross-modal conflict measurement
                     |
                     v
-Calibrated hallucination risk (Part II)
+Uncertainty decomposition and incremental validity
                     |
                     v
-Typed multimodal risk (Part III)
-                    |
-                    v
-Sequential agent decisions (Part IV)
+Calibration and selective decisions
 ```
 
 ## Research Question
@@ -180,10 +175,9 @@ quantiles form predictive intervals.
 
 ![Posterior predictions and intervals](../reports/figures/predictions_and_intervals.png)
 
-This is the central methodological lesson for later parts of the programme. A
-hallucination detector should likewise produce a posterior distribution over
-risk, propagate uncertainty in its parameters and evidence, and expose that
-uncertainty to the downstream decision rule.
+This is the central methodological lesson for later studies. A task-relevant
+risk model should likewise propagate uncertainty in its parameters and
+evidence, and expose calibrated uncertainty to the downstream decision rule.
 
 ## Models and Evaluation Protocol
 
@@ -285,7 +279,7 @@ baseline. Repeated-split NLPD favours Gibbs against the present baselines, while
 CRPS favours RidgeCV and BayesianRidge. Interval-score evidence favours Gibbs
 against OLS and RidgeCV but is mixed against the empirical Bayes models. The
 choice of proper score therefore changes the comparison, which is precisely why
-future hallucination-risk work must report more than AUROC or accuracy.
+future uncertainty-risk work must report more than AUROC or accuracy.
 
 ![Repeated-split paired differences](../reports/figures/repeated_split_pairwise_forest.png)
 
@@ -312,23 +306,23 @@ diagnostics and repeated comparisons, not one attractive interval plot. Fourth,
 the output required for a decision is a predictive distribution, whereas a
 point estimate or raw uncertainty score is insufficient.
 
-These conclusions define the standard for subsequent AI studies. A future
-hallucination-risk model should be evaluated with binary NLL and Brier score,
+These conclusions define the standard for subsequent thesis studies. A future
+task-error risk model should be evaluated with binary NLL and Brier score,
 calibration curves, discrimination metrics, risk--coverage, subgroup analysis,
 and repeated or hierarchical comparisons across models and datasets. It should
 also distinguish the quality of the risk estimate from the utility of the
 decision made with that estimate.
 
-## Bridge to Posterior Hallucination Risk
+## Bridge to Calibrated Task Risk
 
-Let (H_i\in\{0,1\}) denote whether generated item (i) is hallucinated and let
-(z_i) collect observed uncertainty and evidence signals. The first Part II
+Let (Y_i\in\{0,1\}) denote a frozen task-relevant failure for item (i), and let
+(z_i) collect identified uncertainty and evidence signals. A candidate risk
 target is
 
 ```math
 r_i
 =
-P(H_i=1\mid z_i,x_i,m_i,d_i,D),
+P(Y_i=1\mid z_i,x_i,m_i,d_i,D),
 ```
 
 where (x_i) is the prompt and grounding context, (m_i) is the model identity,
@@ -336,19 +330,19 @@ where (x_i) is the prompt and grounding context, (m_i) is the model identity,
 signals in (z_i) are analogous to predictors in Part I; they are not themselves
 the target probability.
 
-Later, an action (a\) will be selected by
+Only after calibration, an action (a\) may be selected by
 
 ```math
 a_i^*
 =
 \arg\min_{a\in\mathcal A}
-\mathbb E\!\left[L(a,H_i)\mid z_i,x_i,m_i,d_i,D\right],
+\mathbb E\!\left[L(a,Y_i)\mid z_i,x_i,m_i,d_i,D\right],
 ```
 
 where (\mathcal A) may include answer, abstain, clarify, retrieve, verify,
-regenerate, consult another agent, or request human review, and (L(a,H_i))
-encodes the cost of action (a) under the unknown hallucination state. This is
-the point at which calibrated uncertainty becomes adaptive behaviour.
+regenerate, or request human review, and (L(a,Y_i)) encodes the cost of action
+(a) under the unknown task state. This is the point at which calibrated
+uncertainty can be evaluated as decision evidence.
 
 ## Limitations
 
@@ -359,7 +353,7 @@ prior and implemented conditionals require a dedicated consistency audit, and
 the repeated-split experiment does not replace external validation. Most
 importantly, regression uncertainty does not capture semantic equivalence,
 factual evidence, label noise, multimodal grounding, model shift, or temporal
-error propagation. These are research targets for Parts 0 and II--IV, not
+error propagation. These are targets for the canonical thesis studies, not
 properties established by Part I.
 
 ## Reproduction

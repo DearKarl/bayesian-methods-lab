@@ -1,45 +1,34 @@
 # Research Questions
 
-## Part 0: Reproduction and Evidence Map
+The authoritative PhD questions, hypotheses, falsifiers, and claim ladder are
+maintained in
+[thesis/research_questions.md](thesis/research_questions.md).
 
-- Which published uncertainty and hallucination results remain reproducible
-  across software versions, model families, datasets, and compute budgets?
-- Which methods estimate prompt difficulty, which estimate output error, and
-  which produce calibrated probabilities rather than uncalibrated scores?
-- Where do author-code results, paper-derived implementations, and new
-  laboratory baselines agree or diverge?
+The canonical sequence is:
 
-## Part I: Bayesian Regression Foundations
+1. identify cross-modal conflict separately from ambiguity within image and
+   text;
+2. compare deterministic, probabilistic, ensemble, and approximate-Bayesian
+   representations under matched conditions;
+3. test incremental validity and calibration of the identified component;
+4. evaluate selective and human-review decisions under explicit constraints.
 
-- What does posterior prediction add beyond ordinary least squares in a
-  controlled regression setting?
-- When do probabilistic scores reveal value that RMSE does not?
-- How should posterior samples be diagnosed before interpreting uncertainty?
+## Preserved Foundation Question
 
-## Part II: Bayesian Hallucination Risk Modeling
+Part I asks what posterior prediction adds beyond point estimation in a
+controlled regression benchmark. Its answer is methodological: posterior
+samples, predictive distributions, intervals, diagnostics, and proper scoring
+provide objects that RMSE alone does not. The saved repeated-split results do
+not establish general RMSE superiority for the Gibbs model.
 
-- Can hallucination be modeled as a calibrated posterior risk?
-- Which uncertainty and evidence signals are predictive of hallucination?
-- Does Bayesian calibration improve NLL, Brier score, ECE, and risk-coverage
-  over heuristic scores?
-- Can label noise and dependence among uncertainty, retrieval, and verifier
-  signals be represented explicitly rather than ignored?
+## Supporting Evidence Questions
 
-## Part III: Multimodal Hallucination Uncertainty
+Part 0 asks which published uncertainty methods can be reproduced, which
+quantities they measure, and whether their outputs are calibrated risks or raw
+signals. Text-only hallucination, retrieval, and agentic questions remain
+supporting routes unless a protocol connects them to a canonical cross-modal
+hypothesis.
 
-- How does hallucination risk change when answers must be grounded in images,
-  documents, charts, or other modalities?
-- Can Bayesian models separate object, attribute, relation, OCR, counting, and
-  reasoning hallucinations?
-- Which multimodal evidence signals remain reliable across models and datasets?
-
-## Part IV: Bayesian Abstention and Decision Rules
-
-- How should posterior hallucination risk drive answer, abstain, verify,
-  regenerate, or human-review decisions?
-- Can credible intervals over risk produce safer decision rules than point
-  thresholds?
-- What is the trade-off between answer coverage, hallucination rate, and
-  utility?
-- When is the expected value of clarification, retrieval, tool use, another
-  agent, or human review greater than its cost?
+See the [scope charter](thesis/scope_charter.md), [problem
+taxonomy](thesis/problem_taxonomy.md), and [roadmap](roadmap.md) before adding a
+new research question or implementation.

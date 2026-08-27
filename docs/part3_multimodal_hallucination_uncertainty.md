@@ -1,83 +1,54 @@
-# Part III: Multimodal Hallucination Uncertainty
+# Supporting Design Record: Multimodal Failure Risk
 
-## Research Question
+**Status:** Earlier design scaffold; superseded as the thesis entry point
 
-How can Bayesian risk modeling quantify hallucination uncertainty when
-language-model answers must be grounded in images, documents, charts, or other
-modalities?
+The previous Part III plan compressed perceptual failure, cross-modal conflict,
+and output hallucination into a single multimodal risk stage. The canonical PhD
+programme now separates those objects.
 
-## Motivation
+    input ambiguity and conflict
+        -> validated uncertainty components
+        -> task-relevant output or claim error
+        -> calibrated risk
+        -> action
 
-Part II models hallucination risk for text-only language-model outputs. Part III
-extends the same posterior-risk idea to multimodal systems, where hallucinations
-may arise from missing visual evidence, incorrect object grounding, wrong
-attributes, counting errors, OCR failures, chart misreading, or unsupported
-visual reasoning.
+## Typed Outcomes
 
-## Target Quantity
+Typed multimodal failures remain useful outcomes:
 
-The main target is a multimodal hallucination risk:
+- unsupported object or attribute;
+- incorrect relation or count;
+- OCR or document-reading failure;
+- reasoning failure;
+- omitted evidence;
+- claim contradicting the image, text, or their joint semantics.
 
-```text
-P(H = 1 | prompt, image_or_context, answer, evidence, multimodal uncertainty features)
-```
+They are outcome labels, not interchangeable uncertainty sources.
 
-Typed risks can also be modeled:
+## Permitted Use of This Scaffold
 
-```text
-P(H_k = 1 | prompt, image_or_context, answer, evidence, features)
-```
+This page may inform a later hierarchical outcome model across models, datasets,
+sites, or error types. Such a model becomes thesis work only after the
+[measurement protocol](thesis/measurement_protocol.md) has identified the
+input-side constructs and the [evaluation protocol](thesis/evaluation_protocol.md)
+has frozen the outcome and comparison.
 
-Here `k` may represent object, attribute, relation, counting, OCR, document,
-chart, or reasoning hallucination.
+## Minimum Comparisons
 
-## Candidate Evidence Features
+- deterministic task confidence;
+- image-only and text-only uncertainty;
+- generic multimodal failure prediction;
+- identified conflict measurement;
+- output semantic uncertainty where generation is used;
+- matched calibrated and uncalibrated risk models.
 
-- object grounding score;
-- attribute consistency score;
-- image-text similarity;
-- OCR consistency;
-- retrieval or document support;
-- VQA cross-check score;
-- contradiction or entailment score;
-- self-consistency disagreement;
-- semantic disagreement;
-- model or dataset identity.
+## Boundary
 
-## First Bayesian Direction
+Starting from a generic multimodal hallucination benchmark is not sufficient to
+establish ambiguity-versus-conflict decomposition. Benchmark labels, visual
+grounding signals, and model-based judges may be noisy. Results must remain
+dataset- and task-bounded.
 
-A first conceptual direction is a hierarchical Bayesian risk model:
-
-```text
-H_ik ~ Bernoulli(r_ik)
-logit(r_ik) = alpha_k + model_effect + dataset_effect + feature_effects
-```
-
-The hierarchy may help compare hallucination types, models, and datasets while
-sharing statistical strength. This should remain conceptual until a dedicated
-Part III implementation PR chooses a dataset and feature interface.
-
-## Evaluation
-
-- binary NLL / NLPD by hallucination type;
-- Brier score;
-- AUROC / AUPRC;
-- calibration by hallucination type;
-- risk-coverage curves;
-- subgroup calibration across models and datasets.
-
-## Minimal Prototype Plan
-
-1. Start from an existing multimodal hallucination benchmark.
-2. Define a small set of hallucination types.
-3. Extract transparent grounding and evidence features.
-4. Fit a Bayesian or hierarchical risk model.
-5. Compare against heuristic detectors and non-Bayesian baselines.
-6. Evaluate calibration and risk-coverage by hallucination type.
-
-## Limitations
-
-- Benchmark labels may be noisy.
-- Visual grounding signals may be imperfect.
-- LLM/VLM judge signals are not ground truth.
-- Results may be model- and dataset-specific.
+The canonical first study is
+[controlled conflict identifiability](thesis/measurement_protocol.md), not this
+historical Part III sequence.

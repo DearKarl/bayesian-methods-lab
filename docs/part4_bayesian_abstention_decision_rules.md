@@ -1,67 +1,44 @@
-# Part IV: Bayesian Abstention and Decision Rules
+# Study 4 Design Record: Selective and Human-Review Decisions
 
-## Research Question
+**Status:** Downstream protocol scaffold; blocked on measurement and calibration
+gates
 
-How should posterior hallucination risk guide decisions such as answering,
-abstaining, verifying, regenerating, or escalating to human review?
+This study asks how a validated and calibrated risk estimate should change an
+action. It does not begin with a threshold chosen from the test results.
 
-## Motivation
+## Candidate Actions
 
-Part II and Part III estimate hallucination risk. Part IV studies how to use
-that risk in decision making. The goal is not only to detect hallucination, but
-to decide what an AI system should do under uncertainty.
+    answer | clarify | retrieve | verify | regenerate | abstain | human_review
 
-## Bayesian Decision Object
+For action \(d\), failure state \(H\), and loss \(L\), a candidate decision rule
+minimizes posterior expected loss over the available actions.
 
-Candidate actions are:
+A conservative rule may use a calibrated upper risk bound, but it must be
+compared with posterior-mean, confidence-only, output-uncertainty, and simple
+coverage-based baselines.
 
-```text
-d in {answer, abstain, verify, regenerate, human_review}
-```
+## Required Outcomes
 
-The Bayesian decision rule is:
+- selective risk and answer coverage;
+- area under the risk--coverage curve;
+- risk at fixed coverage and coverage at fixed risk;
+- expected utility or regret under a frozen loss table;
+- clarification, verification, abstention, and review rates;
+- subgroup and shift results;
+- sensitivity to imperfect, delayed, or costly human review.
 
-```text
-d* = argmin_d E[L(d, H) | evidence]
-```
+## Promotion Boundary
 
-Here `H` is the hallucination event and `L` is a task-specific loss. The loss
-can encode the cost of hallucinating, abstaining, verifying, regenerating, or
-routing an answer to human review.
+This study is authorized only after:
 
-## Conservative Risk Rule
+1. the source-specific measurement passes construct-validity checks;
+2. the outcome risk adds held-out information beyond matched baselines;
+3. calibration is adequate for the tested population;
+4. actions, information availability, costs, and review budget are frozen.
 
-A conservative rule can use an upper credible bound:
+Improved retrospective selective risk is not evidence of clinical benefit. A
+clinician-in-the-loop study requires separate ethics, governance, interface,
+and human-factors protocols.
 
-```text
-answer if upper_95(P(H = 1 | evidence)) < threshold
-```
-
-This is more conservative than using the posterior mean alone, because uncertain
-cases can be routed to verification or review even when their mean estimated
-risk is moderate.
-
-## Evaluation
-
-- answer coverage;
-- selective hallucination risk;
-- risk-coverage curve;
-- utility under different decision costs;
-- abstention rate;
-- verification rate;
-- hallucination reduction among answered outputs.
-
-## Minimal Prototype Plan
-
-1. Reuse calibrated risks from Part II.
-2. Compare posterior-mean thresholds with credible-upper-bound thresholds.
-3. Evaluate risk-coverage curves.
-4. Add a simple cost function.
-5. Extend to multimodal risks from Part III.
-
-## Limitations
-
-- Decision costs are task-dependent.
-- Overly conservative rules may reduce usefulness.
-- Calibration failures can cause unsafe decisions.
-- Human-review assumptions should be made explicit.
+See the canonical [evaluation protocol](thesis/evaluation_protocol.md) and
+[roadmap](roadmap.md).

@@ -1,71 +1,134 @@
 # Bayesian Methods Lab
 
-### From uncertainty signals to posterior risk to reliable action.
+## Decomposable Cross-Modal Semantic Uncertainty for Reliable Decisions
 
-Bayesian Methods Lab is a doctoral research programme on reliable language,
-multimodal, and agentic AI. The laboratory studies how heterogeneous evidence
-can be converted into calibrated posterior hallucination risk, how that risk
-changes across models, domains, modalities, and interaction trajectories, and
-how an AI system should act when the cost of being wrong is not zero.
+This repository is the working research record for a PhD programme on
+cross-modal semantic uncertainty. The central problem is to determine whether
+uncertainty caused by genuine disagreement between image and text can be
+distinguished from ambiguity within either modality, uncertainty about model
+parameters, and uncertainty expressed in a generated output.
+
+The intended contribution is not a new confidence score in isolation. It is a
+validated decomposition that can be connected to calibrated error risk and to
+decisions such as answering, requesting clarification, retrieving more
+evidence, abstaining, or requesting human review.
+
+Medical image--text systems are the primary validation domain. The methods
+remain general until the task, dataset, and clinical scope are confirmed with
+the supervisors. Nothing in this repository is a clinical decision system or
+evidence of clinical benefit.
 
 ```text
-measure uncertainty  ->  infer posterior risk  ->  choose an action
+controlled image--text interventions
+        -> identifiable uncertainty components
+        -> calibrated outcome risk
+        -> selective and human-review decisions
 ```
 
-The objective is not to prove that Bayesian methods always outperform
-deterministic alternatives. It is to identify when posterior inference adds
-measurable value and when that value supports safer decisions.
+## Canonical Research Questions
 
-## Research Map
+1. Can within-image ambiguity, within-text ambiguity, cross-modal conflict,
+   epistemic uncertainty, and output uncertainty be operationally separated?
+2. Does an explicit conflict component add held-out predictive information
+   beyond unimodal uncertainty, model confidence, and output semantic
+   uncertainty?
+3. Does the decomposition remain calibrated under clinically relevant shifts?
+4. Can calibrated risk reduce consequential overconfident errors at a fixed
+   answer coverage or human-review budget?
 
-- **[Part 0: Reproduction and Evidence Map](part0_reproductions/README.md)**
-  - [Route 1: Uncertainty signals](part0_reproductions/01_uncertainty_signals/README.md)
-    - [LM-Polygraph pilot report](part0_reproductions/01_uncertainty_signals/REPORT.md)
-    - [Experiment](part0_reproductions/01_uncertainty_signals/experiments/run_lm_polygraph_signal_pilot.py)
-    - [Results](part0_reproductions/01_uncertainty_signals/reports/tables/signal_summary.csv)
-  - [Route 2: Bayesian risk and decision theory](part0_reproductions/02_bayesian_risk_and_decision_theory/README.md)
-  - [Route 3: Calibration and interaction](part0_reproductions/03_calibration_and_interaction/README.md)
-  - [Route 4: RAG and heterogeneous evidence](part0_reproductions/04_rag_and_heterogeneous_evidence/README.md)
-  - [Route 5: Multimodal risk decomposition](part0_reproductions/05_multimodal_risk_decomposition/README.md)
-  - [Route 6: Agentic and multi-agent uncertainty](part0_reproductions/06_agentic_and_multiagent_uq/README.md)
-- **[Part I: Bayesian Predictive Foundations for Uncertainty-Aware AI](docs/part1_bayesian_regression_foundations.md)**
-  - [Original research-stage summary](docs/original_report_summary.md)
-  - [Dataset and ethics note](docs/dataset_note.md)
-  - [Artifact inventory](docs/artifacts.md)
-- **[Part II: Bayesian Hallucination Risk Modeling](docs/part2_bayesian_hallucination_risk_modeling.md)**
-- **[Part III: Multimodal Hallucination Uncertainty](docs/part3_multimodal_hallucination_uncertainty.md)**
-- **[Part IV: Bayesian Abstention and Decision Rules](docs/part4_bayesian_abstention_decision_rules.md)**
-- **Programme documents**
-  - [Research questions](docs/research_questions.md)
-  - [Roadmap](docs/roadmap.md)
+The hypotheses, null interpretations, and claim boundaries are maintained in
+the [canonical research questions](docs/thesis/research_questions.md).
 
-## Current Evidence
+## Thesis Workstreams
 
-Part I shows comparable point-prediction accuracy across the current linear
-baselines while demonstrating the additional objects supplied by posterior
-inference: predictive distributions, intervals, posterior samples, and proper
-probabilistic scores. The repeated-split study does **not** support a general
-RMSE superiority claim for the Gibbs model.
+| Workstream | Purpose | Current status |
+| --- | --- | --- |
+| [Study 1: Conflict identifiability](docs/thesis/measurement_protocol.md) | Test whether controlled interventions isolate cross-modal conflict from unimodal ambiguity | Protocol design; no thesis result |
+| [Study 2: Uncertainty decomposition](docs/thesis/measurement_protocol.md) | Compare deterministic, probabilistic-embedding, ensemble, and approximate-Bayesian representations | Planned |
+| [Study 3: Calibration and incremental value](docs/thesis/evaluation_protocol.md) | Test whether conflict improves proper scores, calibration, and risk ranking on held-out data | Planned |
+| [Study 4: Selective decisions](docs/thesis/evaluation_protocol.md) | Compare answer, clarify, verify, abstain, and human-review policies under explicit costs | Planned |
 
-The first Part 0 pilot reproduces three official LM-Polygraph estimators on a
-small prompt stress test. Likelihood and entropy signals recognize difficult
-inputs, but their ranking is less reliable for the generations that were
-actually fabricated or malformed. This gap between a raw signal and calibrated
-outcome risk motivates Part II.
+The studies are gates, not a promise that one proposed method will succeed.
+Study 2 cannot be promoted because it uses distributions over embeddings;
+promotion depends on measurement validity and matched comparisons. Study 4
+does not begin until the risk signal is sufficiently stable and calibrated.
 
-## Research Principles
+## Canonical Documents
 
-- Separate point accuracy, uncertainty quality, calibration, and decision utility.
-- Treat hallucination labels, verifier outputs, and agent agreement as noisy evidence.
-- Evaluate with proper scores, calibration, risk--coverage, subgroup robustness,
-  and repeated comparisons.
-- Record reproduction scope and never label a paper-derived implementation as
-  author-code reproduction.
-- Prefer transparent baselines and falsifiable claims over broad performance narratives.
+- [Scope charter](docs/thesis/scope_charter.md)
+- [Problem and outcome taxonomy](docs/thesis/problem_taxonomy.md)
+- [Research questions and hypotheses](docs/thesis/research_questions.md)
+- [Literature matrix](docs/thesis/literature_matrix.md)
+- [Measurement protocol](docs/thesis/measurement_protocol.md)
+- [Evaluation protocol](docs/thesis/evaluation_protocol.md)
+- [Data governance](docs/thesis/data_governance.md)
+- [Decision log](docs/thesis/decision_log.md)
+- [Roadmap and promotion gates](docs/roadmap.md)
 
-## Reproduce the Existing Studies
+These documents are authoritative for future thesis work. Older Part II--IV
+pages are retained only as supporting design history and point back to the
+canonical protocols.
 
-### Part I: Bayesian regression foundation
+## Preserved Evidence
+
+### Bayesian predictive foundation
+
+The existing Boston Housing benchmark is preserved as a completed
+methodological foundation under [Part I](docs/part1_bayesian_regression_foundations.md).
+It demonstrates posterior prediction, diagnostics, proper scoring, and repeated
+comparison. It is not medical evidence. Across the saved repeated splits, the
+custom Gibbs model does not show a stable RMSE advantage over the baselines.
+
+The implementation remains under `src/bayeslinreg/`; saved tables remain in
+`reports/tables/`, and saved figures remain in `reports/figures/`.
+
+### Reproduction and evidence map
+
+[Part 0](part0_reproductions/README.md) records literature reproductions and
+supporting pilots. Its completed Route 1 pilot runs three official
+LM-Polygraph estimators on a small prompt stress test. It is a mechanism-level
+pilot, not a thesis-core result and not a full benchmark reproduction.
+
+Routes on text uncertainty, Bayesian risk, calibration, retrieval, multimodal
+risk, and agentic systems remain supporting evidence. They enter the thesis
+core only when they test a pre-specified cross-modal hypothesis.
+
+## Evidence Status Vocabulary
+
+Every research claim should use one of these labels:
+
+- **literature lead**: relevant work that still requires bibliographic audit;
+- **protocol**: a pre-specified design with no result;
+- **mechanism-level pilot**: a small diagnostic run that does not establish a
+  benchmark claim;
+- **completed experiment**: a documented run with saved outputs;
+- **promoted thesis evidence**: a completed experiment that passes its
+  pre-specified validity, robustness, and reporting gates.
+
+Planned work must never be described as implemented, and a raw uncertainty
+score must never be described as a calibrated probability without validation.
+
+## Repository Map
+
+```text
+docs/thesis/                 canonical PhD scope and protocols
+part0_reproductions/         supporting literature and reproduction evidence
+docs/part1_*.md              preserved Bayesian predictive foundation
+experiments/                 existing reproducible benchmark runners
+experiments/thesis_core/     reserved gated PhD experiment structure
+src/bayeslinreg/             preserved Part I package
+tests/                       existing package tests
+reports/tables/              generated tables
+reports/figures/             generated figures
+```
+
+Future thesis-core code will be added only after the corresponding protocol is
+frozen. It will not be forced into the historically named `bayeslinreg`
+package.
+
+## Reproduce Preserved Studies
+
+### Part I
 
 ```bash
 python -m venv .venv
@@ -76,15 +139,16 @@ python experiments/run_repeated_split_comparison.py
 pytest -q
 ```
 
-### Part 0, Route 1: LM-Polygraph signal pilot
+### Part 0, Route 1
 
-Prepare the isolated environment described in [the route environment
-record](part0_reproductions/01_uncertainty_signals/ENVIRONMENT.md), then run:
+Use the isolated environment in the
+[route environment record](part0_reproductions/01_uncertainty_signals/ENVIRONMENT.md),
+then run:
 
 ```bash
 python part0_reproductions/01_uncertainty_signals/experiments/run_lm_polygraph_signal_pilot.py
 ```
 
-The research programme is evolving. Results are retained when they are useful,
-revised when evidence requires it, and never promoted beyond the experiment
-that produced them.
+Do not regenerate saved outputs merely to update documentation. If an
+experiment is rerun, record the exact command, environment, data and model
+versions, and every numerical change.

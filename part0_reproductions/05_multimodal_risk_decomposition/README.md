@@ -1,13 +1,14 @@
-# Route 5: Multimodal Risk Decomposition
+# Route 5: Multimodal Measurement Evidence
 
-This route studies hallucination risk when answers must be grounded in images,
-documents, charts, audio, or video. It distinguishes perceptual, grounding,
-OCR, object, attribute, relation, counting, and reasoning uncertainty rather
-than compressing every failure into one confidence value.
+This supporting route reviews and reproduces measurements for multimodal
+ambiguity, conflict, grounding failure, and output error. It must keep input
+uncertainty sources separate from outcome categories such as unsupported
+objects, attributes, relations, counts, OCR, or reasoning.
 
-Planned reproductions will compare holistic confidence with typed and
-hierarchical risk estimates under clean, corrupted, missing-modality, and
-out-of-distribution conditions.
+Planned reproductions should compare holistic confidence with source-specific
+measurements under clean, ambiguous, conflicting, corrupted, missing-modality,
+and out-of-distribution conditions. They become thesis evidence only when they
+follow the canonical [measurement protocol](../../docs/thesis/measurement_protocol.md).
 
 **Status:** literature protocol defined; no experiment has yet been claimed as
 reproduced.
