@@ -88,3 +88,13 @@ scope, terminology, hypotheses, and evidence gates are under `docs/research/`.
   supervisor gates.
 - Stop before destructive, external, costly, irreversible, or scope-expanding
   actions unless they are explicitly authorized in a bounded brief.
+
+## Role routing contract (legacy mapping)
+
+- See [CODEX_ROLE_HARNESS.md](./CODEX_ROLE_HARNESS.md) for the shared four-role
+  routing contract and display titles.
+- Legacy role references map to role keys:
+  - Strategic adviser → `advisor` (Advisor (GPT-6 Astra / Ultra))
+  - Intake/state/dispatch coordinator → `adjutant` (Adjutant (GPT-6 Astra / Medium))
+  - Technical design lead → `engineer` (Engineer (GPT-6 Astra / XHigh))
+  - Implementation executor → `executor` (Executor (GPT-5.3 Codex-Spark / XHigh))
